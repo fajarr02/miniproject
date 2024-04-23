@@ -39,7 +39,7 @@ fun AboutScreen(navController: NavHostController) {
                 }
                 ,
                 title = {
-                    Text(text = stringResource(id = R.string.tentang))
+                    Text(text = stringResource(id = R.string.tentang_aplikasi))
                 },
                 colors = TopAppBarDefaults.mediumTopAppBarColors(
                     containerColor = MaterialTheme.colorScheme.primaryContainer,
@@ -48,8 +48,7 @@ fun AboutScreen(navController: NavHostController) {
             )
         }
     ) {padding ->
-        Text(
-            text = stringResource(id = R.string.app_name),
+        Text(text = stringResource(id = R.string.copyright),
             modifier = Modifier
                 .padding(padding)
                 .padding(16.dp)
