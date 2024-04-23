@@ -152,21 +152,46 @@ fun ScreenContent(modifier: Modifier, context: Context) {
             }
         }
 
-        Button(
-            onClick = {
-                nominalPinjamanError = (nominalPinjaman == "" || nominalPinjaman == "0")
-                if(nominalPinjamanError) return@Button
-
-                val bungaPersen = if (tenorIndex == 0) 0.15f else 0.10f
-                bunga = bungaPersen * 100 // Convert to percentage for display
-                val tenor = if (tenorIndex == 0) 3 else 6
-                totalPembayaran = hitungTotalPembayaran(nominalPinjaman.toFloat(), bungaPersen, tenor)
-            },
-            modifier = Modifier.padding(top = 8.dp),
-            contentPadding = PaddingValues(horizontal = 32.dp, vertical = 16.dp)
+        Row(
+            modifier = Modifier
+                .fillMaxSize(),
+            horizontalArrangement = Arrangement.Center
         ) {
-            Text(text = stringResource(id = R.string.hitung))
+            Button(
+                onClick = {
+                    nominalPinjamanError = (nominalPinjaman == "" || nominalPinjaman == "0")
+                    if(nominalPinjamanError) return@Button
+
+                    val bungaPersen = if (tenorIndex == 0) 0.15f else 0.10f
+                    bunga = bungaPersen * 100 // Convert to percentage for display
+                    val tenor = if (tenorIndex == 0) 3 else 6
+                    totalPembayaran = hitungTotalPembayaran(nominalPinjaman.toFloat(), bungaPersen, tenor)
+                },
+                modifier = Modifier.padding(top = 8.dp),
+                contentPadding = PaddingValues(horizontal = 32.dp, vertical = 16.dp)
+            ) {
+                Text(text = stringResource(id = R.string.hitung))
+            }
+
+            Spacer(modifier = Modifier.width(18.dp))
+
+            Button(
+                onClick = {
+                    // Reset semua nilai ke nilai awal
+                    nominalPinjaman = ""
+                    nominalPinjamanError = false
+                    tenorIndex = 0
+                    bunga = 0.0f
+                    totalPembayaran = 0.0f
+                },
+                modifier = Modifier.padding(top = 8.dp),
+                contentPadding = PaddingValues(horizontal = 32.dp, vertical = 16.dp)
+            ) {
+                Text(text = stringResource(id = R.string.reset))
+            }
         }
+
+
 
         if(totalPembayaran != 0.0f) {
             Divider(
