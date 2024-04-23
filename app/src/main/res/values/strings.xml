@@ -15,6 +15,7 @@
     <string name="kembali">Kembali</string>
     <string name="bagikan">Bagikan</string>
     <string name="reset">Reset</string>
+    <string name="logodes">Logo</string>
     <string name="bagikan_template">Nominal Pinjaman: %1$.2f\nTenor: %2$s Bulan\nBunga: %3$.2f%%\nTotal Pelunasan: Rp %4$.2f</string>
     <string name="copyright">Cloan adalah sebuah aplikasi yang membantu pengguna dalam menghitung jumlah bunga yang harus dibayar setelah melakukan peminjaman. Dengan menggunakan aplikasi ini, pengguna dapat memasukkan nominal pinjaman, memilih tenor pinjaman, dan melihat estimasi jumlah bunga yang akan ditambahkan ke total pembayaran. Aplikasi ini memastikan bahwa pengguna mendapatkan informasi yang akurat mengenai total pembayaran yang harus dilakukan, sehingga mereka dapat membuat keputusan keuangan yang lebih baik.\n\n
         Aplikasi ini dibuat untuk kelas Mobpro 1.\n\nCopyright © 2024 Yaumil Fajar.\nAll rights reserved.</string>
