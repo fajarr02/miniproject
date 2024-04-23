@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Cloan</string>
+
+    <string name="kembali">Kembali</string>
+    <string name="tentang">Tentang </string>
+
 </resources>
